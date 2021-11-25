@@ -1,0 +1,19 @@
+{#
+/**
+ * Template for page of user if login_only_mode ON
+ *
+ * Add links to contact page and submission list page to the User profile page for quick access.
+ */
+#}
+<article>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</article>
+
+  {% for text, url in links %}
+    <p>
+      <a href={{ url }}>{{ text }}</a>
+    </p>
+  {% endfor %}
+
